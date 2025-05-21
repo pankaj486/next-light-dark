@@ -62,10 +62,21 @@ export default function SignInForm() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition"
+        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer"
       >
         Sign In
       </motion.button>
+
+      <p className="text-sm text-center text-gray-600 dark:text-gray-400">
+        Don&apos;t have an account?{" "}
+        <button
+          type="button"
+          onClick={() => router.push("/register")}
+          className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
+        >
+          Register here
+        </button>
+      </p>
     </motion.form>
   );
 }

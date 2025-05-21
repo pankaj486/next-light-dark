@@ -80,10 +80,21 @@ export default function SignUpForm() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         type="submit"
-        className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition"
+        className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer"
       >
         Sign Up
       </motion.button>
+
+      <p className="text-sm text-center text-gray-600 dark:text-gray-400">
+        Already have an account?{" "}
+        <button
+          type="button"
+          onClick={() => router.push("/login")}
+          className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
+        >
+          Login 
+        </button>
+      </p>
     </motion.form>
   );
 }

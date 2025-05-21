@@ -74,19 +74,17 @@ export default function Header() {
                   ? "Switch to light mode"
                   : "Switch to dark mode"
               }
+              whileTap={{ scale: 0.9 }}
               whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 15,
+                bounce: 0.5,
+              }}
             >
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </motion.button>
-
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/login">
-                <button className="px-4 py-2 text-sm border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transition">
-                  Sign In
-                </button>
-              </Link>
-            </motion.div>
           </motion.div>
         </motion.nav>
       </div>
